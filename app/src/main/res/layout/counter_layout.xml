@@ -17,7 +17,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="@string/zero"
         android:id="@+id/counter"
         android:layout_row="0"
         android:layout_column="1"/>
