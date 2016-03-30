@@ -12,24 +12,36 @@
     tools:context="agutteridge.com.miniowe.NewContact"
     tools:showIn="@layout/activity_new_contact">
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/contactImage"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="true"
+        android:src="@drawable/distinguished_elephant_large_smooth"
+        android:maxHeight="100dp"
+        android:maxWidth="100dp"/>
+
     <EditText
         android:id="@+id/nickname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textCapWords"
+        android:inputType="textCapWords|textNoSuggestions"
         android:hint="@string/nickname"
         android:textColor="#000000"
-        android:ems="10"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/contactImage"
+        android:layout_marginTop="12dp"
+        android:maxLength="15"/>
 
     <agutteridge.com.miniowe.CounterLayout
         android:id="@+id/counter_layout"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/nickname"
-        android:background="#ffff00"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -39,5 +51,6 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="53dp" />
+
 
 </RelativeLayout>

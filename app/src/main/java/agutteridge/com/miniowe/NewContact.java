@@ -1,6 +1,5 @@
 package agutteridge.com.miniowe;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -24,8 +23,6 @@ public class NewContact extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-//        Intent intent = getIntent();
-
         CounterLayout counterLayout= (CounterLayout) findViewById(R.id.counter_layout);
         LayoutInflater layoutInflater = getLayoutInflater();
         View counterView = layoutInflater.inflate(R.layout.counter_layout, null, false);
@@ -40,7 +37,6 @@ public class NewContact extends AppCompatActivity {
         minus.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 String counterString = counter.getText().toString();
-                Log.d(TAG, "counterValue originally: " + counterString);
                 int counterInt = Integer.parseInt(counterString);
                 String newValue = Integer.toString(--counterInt);
                 Log.d(TAG, "Minus one from counterValue: " + newValue);
@@ -52,7 +48,6 @@ public class NewContact extends AppCompatActivity {
         plus.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 String counterString = counter.getText().toString();
-                Log.d(TAG, "counterValue originally: " + counterString);
                 int counterInt = Integer.parseInt(counterString);
                 String newValue = Integer.toString(++counterInt);
                 Log.d(TAG, "Plus one to counterValue: " + newValue);
